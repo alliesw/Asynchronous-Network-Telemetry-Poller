@@ -1,0 +1,2445 @@
+<html lang="en" class="dark"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNjAwMzMzMjY2OTg1NjMzMjQzOSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzA4NTliYzljMzY1NjdmZjdfaW5kZXguaHRtbC00NjkifSwiZXhwIjoxNzkwMjg3NjA4LCJpYXQiOjE3OTAyODQwMDgsImFsZyI6IlJTMjU2In0.TvStVoS6t0D2W5c3wqzMMX9FlOyvsetQ3AuXXvbm6hB0zh24xHZQGE7XLgL28RaYTn50lMT8wkDCd7oMLpnz3Ivzntnk45y4VjmtMxBH04jGFb3bfCM7Fv5fENRe9mUrDQ_JXAtZNybe5srQLFMtsNYKTvIuO8ILnOt5Aphv1az6rFjNlsJb6yujRox3p60z1xvDGWOHVl39iW8WKLYqIz18Ufe1CLKe2AliXUtBRvuJJzP7Nw7eJ9X4O8XaprNcdJPLwDKtHldwIYN5CQn-v1NNjo6LdCK4cAqmz8OsScDCPVhI787A6Y2_qYajlT6HFPQssKPga5C2kjaiH9Xz8g","c_0859bc9c36567ff7_index.html-469")</script><script data-bard-client-injected="true">
+  document.addEventListener('input', (event) => {
+    if (event.target && (event.target.isContentEditable || event.target.hasAttribute('contenteditable'))) {
+      const clonedDoc = document.cloneNode(true);
+      const injectedScripts = clonedDoc.querySelectorAll('[data-bard-client-injected="true"]');
+      injectedScripts.forEach(el => el.remove());
+      window.parent.postMessage({
+        type: 'inlineEdit',
+        html: '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML
+      }, '*');
+    }
+  });
+</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-client-injected="true">(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,d){if(a==Array.prototype||a==Object.prototype)return a;a[c]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var d=a[c];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,c){if(c)a:{var d=n;a=a.split(".");for(var b=0;b<a.length-1;b++){var e=a[b];if(!(e in d))break a;d=d[e]}a=a[a.length-1];b=d[a];c=c(b);c!=b&&c!=null&&h(d,a,{configurable:!0,writable:!0,value:c})}}function r(a){function c(b){return a.next(b)}function d(b){return a.throw(b)}return new Promise(function(b,e){function f(g){g.done?b(g.value):Promise.resolve(g.value).then(c,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(c){var d=[],b;for(b in c)Object.prototype.hasOwnProperty.call(c,b)&&d.push(c[b]);return d}});p("Array.prototype.includes",function(a){return a?a:function(c,d){var b=this;b instanceof String&&(b=String(b));var e=b.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=b[d];if(f===c||Object.is(f,c))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,c){var d=a.style;c.backgroundColor&&(d.backgroundColor=c.backgroundColor);c.width&&(d.width=`${c.width}px`);c.height&&(d.height=`${c.height}px`);var b=c.style;b!=null&&Object.keys(b).forEach(e=>{d[e]=b[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var c=[];for(let d=0,b=a.length;d<b;d++)c.push(a[d]);return c}let x=null;function y(a={}){return x?x:a.u?x=a.u:x=w(window.getComputedStyle(document.documentElement))}function z(a,c){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(c))?parseFloat(a.replace("px","")):0}
+function A(a,c={}){var d;if(!(d=c.width)){d=z(a,"border-left-width");var b=z(a,"border-right-width");d=a.clientWidth+d+b}(c=c.height)||(c=z(a,"border-top-width"),b=z(a,"border-bottom-width"),c=a.clientHeight+c+b);return{width:d,height:c}}function B(a){return new Promise((c,d)=>{var b=new Image;b.onload=()=>{b.decode().then(()=>{requestAnimationFrame(()=>c(b))})};b.onerror=d;b.crossOrigin="anonymous";b.decoding="async";b.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(c=>`data:image/svg+xml;charset=utf-8,${c}`)})}
+function D(a,c,d){return t(function*(){var b=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");b.setAttribute("width",`${c}`);b.setAttribute("height",`${d}`);b.setAttribute("viewBox",`0 0 ${c} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");b.appendChild(e);e.appendChild(a);return C(b)})}
+var E=(a,c)=>{if(a instanceof c)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===c.name||E(a,c)};function aa(a,c){return y(c).map(d=>{var b=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${b}${e?" !important":""};`}).join(" ")}
+function F(a,c,d,b){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{c.className=`${c.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(b=a.getPropertyValue("content"),b=`${a.cssText} content: '${b.replace(/'|"/g,"")}';`):b=aa(a,b);g.call(e,document.createTextNode(`${d}{${b}}`));c.appendChild(e)}};function G(a){return a.search(/^(data:)/)!==-1}function H(a,c,d){return t(function*(){var b=yield fetch(a,c);if(b.status===404)throw Error(`Resource "${b.url}" not found`);var e=yield b.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({A:b,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const I={};function ba(a,c,d){var b=a.replace(/\?.*/,"");d&&(b=a);/ttf|otf|eot|woff2?/i.test(b)&&(b=b.replace(/.*\//,""));return c?`[${c}]${b}`:b}
+function J(a,c,d){return t(function*(){var b=ba(a,c,d.G);if(I[b]!=null)return I[b];d.C&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield H(a,d.l,({A:g,result:k})=>{c||(c=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${c};base64,${f}`}catch(f){e=d.o||""}return I[b]=e})};const K={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",D:"application/vnd.ms-fontobject",J:"image/png",I:"image/jpeg",H:"image/jpeg",F:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function L(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function ca(a){return t(function*(){var c=a.toDataURL();return c==="data:,"?a.cloneNode(!1):B(c)})}function da(a,c){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let b=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;b==null||b.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield J(d,K[L(d).toLowerCase()]||"",c);return B(d)})}
+function ea(a,c){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield M(a.contentDocument.body,c,!0)}catch(d){}return a.cloneNode(!1)})}function fa(a,c){return t(function*(){return E(a,HTMLCanvasElement)?ca(a):E(a,HTMLVideoElement)?da(a,c):E(a,HTMLIFrameElement)?ea(a,c):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function ha(a,c,d){return t(function*(){if(c.tagName!=null&&c.tagName.toUpperCase()==="SVG")return c;var b=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)b=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))b=w(a.contentDocument.body.childNodes);else{let f;b=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(b.length===0||E(a,HTMLVideoElement))return c;yield b.reduce((e,f)=>e.then(()=>M(f,d)).then(g=>{g&&c.appendChild(g)}),Promise.resolve());
+return c})}function ia(a,c,d){var b=c.style;if(b){var e=window.getComputedStyle(a);e.cssText?(b.cssText=e.cssText,b.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&c.getAttribute("d")&&(g=`path(${c.getAttribute("d")})`);b.setProperty(f,g,e.getPropertyPriority(f))})}}
+function ja(a,c){E(a,HTMLSelectElement)&&(c=Array.from(c.children).find(d=>a.value===d.getAttribute("value")))&&c.setAttribute("selected","")}
+function ka(a,c){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var b={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||b[f]||(b[f]=yield M(g,c,!0))}}d=Object.values(b);if(d.length){b=document.createElementNS("http://www.w3.org/1999/xhtml","svg");b.setAttribute("xmlns","http://www.w3.org/1999/xhtml");b.style.position="absolute";b.style.width="0";b.style.height="0";
+b.style.overflow="hidden";b.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");b.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(b)}return a})}
+function M(a,c,d){return t(function*(){return d||!c.filter||c.filter(a)?Promise.resolve(a).then(b=>fa(b,c)).then(b=>ha(a,b,c)).then(b=>{E(b,Element)&&(ia(a,b,c),F(a,b,":before",c),F(a,b,":after",c),E(a,HTMLTextAreaElement)&&(b.textContent=a.value),E(a,HTMLInputElement)&&b.setAttribute("value",a.value),ja(a,b));return b}).then(b=>ka(b,c)):null})};const N=/url\((['"]?)([^'"]+?)\1\)/g,la=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ma=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function na(a){var c=[];a.replace(N,(d,b,e)=>{c.push(e);return d});return c.filter(d=>!G(d))}
+function oa(a,c,d,b){return t(function*(){try{let e=d?(new URL(c,d||void 0)).toString():c,f;f=yield J(e,K[L(c).toLowerCase()]||"",b);return a.replace(new RegExp(`(url\\(['"]?)(${c.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function pa(a,{K:c}){return c?a.replace(ma,d=>{for(;;){let [b,,e]=la.exec(d)||[];if(!e)return"";if(e===c)return`src: ${b};`}}):a}
+function O(a,c,d){return t(function*(){if(a.search(N)===-1)return a;var b=pa(a,d);return na(b).reduce((e,f)=>e.then(g=>oa(g,f,c,d)),Promise.resolve(b))})};function P(a,c,d){return t(function*(){var b,e=(b=c.style)==null?void 0:b.getPropertyValue(a);return e?(b=yield O(e,null,d),c.style.setProperty(a,b,c.style.getPropertyPriority(a)),!0):!1})}function qa(a,c){return t(function*(){(yield P("background",a,c))||(yield P("background-image",a,c));(yield P("mask",a,c))||(yield P("-webkit-mask",a,c))||(yield P("mask-image",a,c))||(yield P("-webkit-mask-image",a,c))})}
+function ra(a,c){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!G(a.src)||E(a,SVGImageElement)&&!G(a.href.baseVal)){var b=d?a.src:a.href.baseVal,e=yield J(b,K[L(b).toLowerCase()]||"",c);yield new Promise((f,g)=>{a.onload=f;a.onerror=c.h?(...k)=>{try{f(c.h(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function sa(a,c){return t(function*(){var d=w(a.childNodes).map(b=>Q(b,c));yield Promise.all(d).then(()=>a)})}function Q(a,c){return t(function*(){E(a,Element)&&(yield qa(a,c),yield ra(a,c),yield sa(a,c))})};const R={};function S(a){return t(function*(){var c=R[a];if(c!=null)return c;c=yield(yield fetch(a)).text();c={url:a,cssText:c};return R[a]=c})}function T(a,c){return t(function*(){var d=a.cssText,b=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(b,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return H(g,c.l,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function U(a){if(a==null)return[];var c=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var b=d.exec(a);if(b===null)break;c.push(b[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(b=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=b.exec(a),e===null)break;else d.lastIndex=b.lastIndex;else b.lastIndex=
+d.lastIndex;c.push(e[0])}return c}
+function ta(a,c){return t(function*(){var d=[],b=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=S(f.href).then(m=>T(m,c)).then(m=>U(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Ia){}})).catch(()=>{});b.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&b.push(S(e.href).then(k=>T(k,c)).then(k=>U(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(b).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ua(a){return a.filter(c=>c.type===CSSRule.FONT_FACE_RULE).filter(c=>c.style.getPropertyValue("src").search(N)!==-1)}function va(a,c){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield ta(d,c);return ua(d)})}
+function wa(a){function c(b){(b.style.fontFamily||getComputedStyle(b).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(b.children).forEach(e=>{e instanceof HTMLElement&&c(e)})}var d=new Set;c(a);return d}function xa(a,c){return t(function*(){var d=yield va(a,c),b=wa(a);return(yield Promise.all(d.filter(e=>b.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>O(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,c)))).join("\n")})}
+function ya(a,c){return t(function*(){var d=c.m!=null?c.m:c.B?null:yield xa(a,c);if(d){let b=document.createElement("style");b.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(b,a.firstChild):a.appendChild(b)}})};function za(a,c={}){return t(function*(){var {width:d,height:b}=A(a,c),e=yield M(a,c,!0);yield ya(e,c);yield Q(e,c);u(e,c);return yield D(e,d,b)})}
+function Aa(a,c={}){return t(function*(){var {width:d,height:b}=A(a,c),e=yield za(a,c);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=c.v||window.devicePixelRatio||1,m=c.j||d,q=c.i||b;f.width=m*k;f.height=q*k;!c.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;c.backgroundColor&&(g.fillStyle=c.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Ba(a,c={}){return t(function*(){return(yield Aa(a,c)).toDataURL()})};const Ca=["gemini.google.com","corp.google.com","proxy.googlers.com"];function V(){return document.body.querySelectorAll('[class*="animate"]').length>0}function W(a,c){var d=document.createElement("canvas");d.width=a;d.height=c;return d.toDataURL("image/png")}const X=W(1,1);
+function Da(a){a=a.querySelectorAll("svg, svg *");var c=[];for(let b of Array.from(a)){if(!(b instanceof SVGElement))continue;a=window.getComputedStyle(b);let e=b.getAttribute("style");a.fill&&(b.style.fill=a.fill);a.stroke&&(b.style.stroke=a.stroke);a.strokeWidth&&(b.style.strokeWidth=a.strokeWidth);a.strokeDasharray&&(b.style.strokeDasharray=a.strokeDasharray);a.strokeLinecap&&(b.style.strokeLinecap=a.strokeLinecap);a.strokeLinejoin&&(b.style.strokeLinejoin=a.strokeLinejoin);a.strokeOpacity&&(b.style.strokeOpacity=
+a.strokeOpacity);a.fillOpacity&&(b.style.fillOpacity=a.fillOpacity);a.opacity&&(b.style.opacity=a.opacity);a.transform&&a.transform!=="none"&&(b.style.transform=a.transform);var d=b.tagName.toLowerCase();if(d==="text"||d==="tspan"||d==="textpath"){a.fontFamily&&(b.style.fontFamily=a.fontFamily);a.fontSize&&(b.style.fontSize=a.fontSize);a.fontWeight&&(b.style.fontWeight=a.fontWeight);a.fontStyle&&(b.style.fontStyle=a.fontStyle);a.letterSpacing&&(b.style.letterSpacing=a.letterSpacing);a.wordSpacing&&
+(b.style.wordSpacing=a.wordSpacing);if((d=a.textAnchor||a.getPropertyValue("text-anchor"))&&d!=="none"){b.style.textAnchor=d;let f=b.getAttribute("text-anchor");b.setAttribute("text-anchor",d);c.push(()=>{f===null?b.removeAttribute("text-anchor"):b.setAttribute("text-anchor",f)})}if((d=a.dominantBaseline||a.getPropertyValue("dominant-baseline"))&&d!=="none"){b.style.dominantBaseline=d;let f=b.getAttribute("dominant-baseline");b.setAttribute("dominant-baseline",d);c.push(()=>{f===null?b.removeAttribute("dominant-baseline"):
+b.setAttribute("dominant-baseline",f)})}if((d=a.alignmentBaseline||a.getPropertyValue("alignment-baseline"))&&d!=="none"){b.style.alignmentBaseline=d;let f=b.getAttribute("alignment-baseline");b.setAttribute("alignment-baseline",d);c.push(()=>{f===null?b.removeAttribute("alignment-baseline"):b.setAttribute("alignment-baseline",f)})}if(a=a.paintOrder||a.getPropertyValue("paint-order"))b.style.paintOrder=a}c.push(()=>{e===null?b.removeAttribute("style"):b.setAttribute("style",e)})}return()=>{for(let b of c)b()}}
+function Ea(a){a=a.querySelectorAll("*");var c=[];for(let b of Array.from(a)){if(!(b instanceof HTMLElement))continue;if(b instanceof SVGElement)continue;a=b.tagName.toLowerCase();if(a==="script"||a==="style"||a==="canvas"||a==="img"||a==="svg")continue;var d=window.getComputedStyle(b);if(d.display==="none"||d.visibility==="hidden")continue;if(d.display==="flex"||d.display==="grid"||d.display==="table")continue;let e;if((e=b.textContent)==null||!e.trim())continue;if(d.whiteSpace.startsWith("pre"))continue;
+if(Array.from(b.children).some(g=>{if(!(g instanceof HTMLElement))return!1;g=window.getComputedStyle(g).display;return g==="block"||g==="flex"||g==="grid"||g==="table"}))continue;d=Number(d.fontSize.replace("px",""))||16;let f=b.clientHeight;d=f>0&&f<=Math.ceil(d*2.2);a=a==="button"||a==="label"||b.classList.contains("lumi-btn")||b.classList.contains("lumi-caption")||b.classList.contains("lumi-body-m-emphasized")||b.classList.contains("attr-key")||b.classList.contains("attr-name")||b.classList.contains("attr-type")||
+b.id.includes("badge")||b.id.includes("title");if(d||a){let g=b.style.whiteSpace,k=b.style.minWidth;b.style.whiteSpace="nowrap";b.style.minWidth="max-content";c.push(()=>{b.style.whiteSpace=g;b.style.minWidth=k})}}return()=>{for(let b of c)b()}}function Y(){var a=document.body,c=Da(a),d=Ea(a);return()=>{d();c()}}
+function Z(a){return t(function*(){var c=Math.max(2,window.devicePixelRatio||1),d=Math.max(a.offsetWidth,1),b=Math.max(a.offsetHeight,1);try{return yield Ba(a,{width:d*c,height:b*c,j:d*c,i:b*c,v:1,style:{transform:`scale(${c})`,transformOrigin:"top left",width:`${d}px`,height:`${b}px`},B:!0,filter:e=>{if(e.tagName==="IMG"){let f=e.getAttribute("src");if(!f||f.trim()===""||e.style.display==="none")return!1}return!0},o:X,h:()=>X})}catch(e){return W(d*c,b*c)}})}
+function Fa(){return t(function*(){var a=document.body.offsetWidth,c=document.body.offsetHeight,d=document.body.cloneNode(!0),b=d.querySelectorAll('[class*="animate"]');for(let e of Array.from(b))e.classList.remove(...Array.from(e.classList).filter(f=>f.startsWith("animate")));d.style.width=`${a}px`;d.style.height=`${c}px`;return d})}
+function Ga(a){return t(function*(){var c=Y();try{let d=document.body;if(V()){let e=yield Fa();d=e;document.body.appendChild(e)}let b=yield Z(d);V()&&document.body.removeChild(d);window.parent.postMessage({type:"SEND_SCREENSHOT",image:b,topOffset:document.documentElement.scrollTop},a.origin)}finally{c()}})}
+function Ha(a){return t(function*(){var c=Y();try{let d={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(d,a.origin)}finally{c()}})}window.addEventListener("message",a=>t(function*(){if(Ca.some(d=>a.origin.includes(d))){var c=a.data;c&&(c.type==="MAKE_SCREENSHOT"&&(yield Ga(a)),c.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ha(a)))}}));
+})();</script><script data-bard-client-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-client-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.j=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.i="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-client-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-client-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Network Telemetry Poller | Alex Shields-Weber</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        splunk: {
+                            500: '#ff69b4',
+                            600: '#e05297',
+                            accent: '#f25c05'
+                        },
+                        postgres: {
+                            500: '#336791'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome Icons CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* SVG Glow Effects */
+        .glow-cyan {
+            filter: drop-shadow(0px 0px 8px rgba(14, 165, 233, 0.6));
+        }
+        .glow-amber {
+            filter: drop-shadow(0px 0px 8px rgba(245, 158, 11, 0.6));
+        }
+        .glow-purple {
+            filter: drop-shadow(0px 0px 8px rgba(168, 85, 247, 0.6));
+        }
+        .glow-green {
+            filter: drop-shadow(0px 0px 8px rgba(34, 197, 94, 0.6));
+        }
+
+        /* Signal Pulse Animation */
+        @keyframes flowPulse {
+            0% { stroke-dashoffset: 24; }
+            100% { stroke-dashoffset: 0; }
+        }
+        .data-stream-path {
+            stroke-dasharray: 6, 6;
+            animation: flowPulse 1.2s linear infinite;
+        }
+
+        /* Terminal Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(51, 65, 85, 0.8);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(71, 85, 105, 1);
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(30, 41, 59, 0.8);
+        }
+
+        /* Accordion transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.expanded {
+            max-height: 1000px;
+            opacity: 1;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, Fira Code, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.left-1\/4{left:25%}.right-10{right:2.5rem}.top-0{top:0px}.top-1\/2{top:50%}.-left-\[31px\]{left:-31px}.top-1\.5{top:0.375rem}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-3{height:0.75rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-80{height:20rem}.h-96{height:24rem}.h-\[380px\]{height:380px}.h-auto{height:auto}.h-5{height:1.25rem}.h-full{height:100%}.max-h-48{max-height:12rem}.max-h-\[480px\]{max-height:480px}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-2\.5{width:0.625rem}.w-3{width:0.75rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-80{width:20rem}.w-96{width:24rem}.w-full{width:100%}.w-5{width:1.25rem}.min-w-\[650px\]{min-width:650px}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-1{gap:0.25rem}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-t-lg{border-top-left-radius:0.5rem;border-top-right-radius:0.5rem}.border{border-width:1px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-brand-500{--tw-border-opacity:1;border-color:rgb(14 165 233 / var(--tw-border-opacity, 1))}.border-brand-500\/20{border-color:rgb(14 165 233 / 0.2)}.border-emerald-500\/20{border-color:rgb(16 185 129 / 0.2)}.border-purple-500\/20{border-color:rgb(168 85 247 / 0.2)}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-50{--tw-border-opacity:1;border-color:rgb(248 250 252 / var(--tw-border-opacity, 1))}.bg-amber-500\/10{background-color:rgb(245 158 11 / 0.1)}.bg-blue-500\/10{background-color:rgb(59 130 246 / 0.1)}.bg-brand-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-brand-500\/10{background-color:rgb(14 165 233 / 0.1)}.bg-brand-500\/20{background-color:rgb(14 165 233 / 0.2)}.bg-brand-600{--tw-bg-opacity:1;background-color:rgb(2 132 199 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-green-500\/80{background-color:rgb(34 197 94 / 0.8)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-red-500\/80{background-color:rgb(239 68 68 / 0.8)}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-100\/40{background-color:rgb(241 245 249 / 0.4)}.bg-slate-100\/50{background-color:rgb(241 245 249 / 0.5)}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/50{background-color:rgb(15 23 42 / 0.5)}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-yellow-500\/80{background-color:rgb(234 179 8 / 0.8)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-brand-600{--tw-gradient-from:#0284c7 var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 132 199 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-100\/60{--tw-gradient-from:rgb(241 245 249 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(241 245 249 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-amber-500{--tw-gradient-from:#f59e0b var(--tw-gradient-from-position);--tw-gradient-to:rgb(245 158 11 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-500{--tw-gradient-from:#ec4899 var(--tw-gradient-from-position);--tw-gradient-to:rgb(236 72 153 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-600{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-cyan-400{--tw-gradient-to:#22d3ee var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.to-cyan-500{--tw-gradient-to:#06b6d4 var(--tw-gradient-to-position)}.to-indigo-500{--tw-gradient-to:#6366f1 var(--tw-gradient-to-position)}.to-rose-500{--tw-gradient-to:#f43f5e var(--tw-gradient-to-position)}.to-teal-400{--tw-gradient-to:#2dd4bf var(--tw-gradient-to-position)}.to-yellow-400{--tw-gradient-to:#facc15 var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-12{padding-bottom:3rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pl-6{padding-left:1.5rem}.pt-10{padding-top:2.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-mono{font-family:JetBrains Mono, Fira Code, monospace}.font-sans{font-family:Inter, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-brand-400{--tw-text-opacity:1;color:rgb(56 189 248 / var(--tw-text-opacity, 1))}.text-brand-500{--tw-text-opacity:1;color:rgb(14 165 233 / var(--tw-text-opacity, 1))}.text-brand-600{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-purple-500{--tw-text-opacity:1;color:rgb(168 85 247 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.accent-brand-500{accent-color:#0ea5e9}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-brand-500\/20{--tw-shadow-color:rgb(14 165 233 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.selection\:bg-brand-500 *::selection{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-brand-500::selection{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-brand-500:hover{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-300:hover{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-brand-500:hover{--tw-text-opacity:1;color:rgb(14 165 233 / var(--tw-text-opacity, 1))}.hover\:text-brand-600:hover{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.hover\:text-slate-200:hover{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.dark\:border-slate-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.dark\:border-slate-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.dark\:border-slate-950:is(.dark *){--tw-border-opacity:1;border-color:rgb(2 6 23 / var(--tw-border-opacity, 1))}.dark\:bg-slate-700:is(.dark *){--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.dark\:bg-slate-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.dark\:bg-slate-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.dark\:bg-slate-900\/30:is(.dark *){background-color:rgb(15 23 42 / 0.3)}.dark\:bg-slate-900\/40:is(.dark *){background-color:rgb(15 23 42 / 0.4)}.dark\:bg-slate-900\/60:is(.dark *){background-color:rgb(15 23 42 / 0.6)}.dark\:bg-slate-900\/80:is(.dark *){background-color:rgb(15 23 42 / 0.8)}.dark\:bg-slate-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.dark\:from-slate-900\/60:is(.dark *){--tw-gradient-from:rgb(15 23 42 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.dark\:to-transparent:is(.dark *){--tw-gradient-to:transparent var(--tw-gradient-to-position)}.dark\:text-amber-400:is(.dark *){--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.dark\:text-blue-400:is(.dark *){--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.dark\:text-brand-400:is(.dark *){--tw-text-opacity:1;color:rgb(56 189 248 / var(--tw-text-opacity, 1))}.dark\:text-emerald-400:is(.dark *){--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.dark\:text-purple-400:is(.dark *){--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.dark\:text-slate-100:is(.dark *){--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.dark\:text-slate-200:is(.dark *){--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.dark\:text-slate-300:is(.dark *){--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.dark\:text-slate-400:is(.dark *){--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:hover\:bg-slate-700:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.dark\:hover\:text-brand-400:hover:is(.dark *){--tw-text-opacity:1;color:rgb(56 189 248 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media (min-width: 768px){.md\:-left-\[47px\]{left:-47px}.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:items-center{align-items:center}.md\:pl-10{padding-left:2.5rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:w-80{width:20rem}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-center{align-items:center}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-5xl{font-size:3rem;line-height:1}}</style></head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand & Title -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-network-wired text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">Engineering Showcase</span>
+                    <h1 class="text-base font-bold leading-none text-slate-900 dark:text-white">Telemetry Poller</h1>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#architecture" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Architecture</a>
+                <a href="#tech-stack" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Tech Stack</a>
+                <a href="#simulator" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Live Demo</a>
+                <a href="#timeline" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Timeline</a>
+                <a href="#snippets" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Code Snippets</a>
+            </nav>
+
+            <!-- Actions: Exporter & Theme Toggle -->
+            <div class="flex items-center space-x-3">
+                <button id="exportModalBtn" class="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 transition">
+                    <i class="fa-solid fa-code text-brand-500"></i>
+                    <span class="hidden sm:inline">Export Source</span>
+                </button>
+
+                <!-- Theme Toggle Button -->
+                <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 border border-slate-200 dark:border-slate-700 transition">
+                    <i id="themeIcon" class="fa-solid fa-sun text-amber-400"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="relative overflow-hidden pt-10 pb-12 border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-slate-100/60 to-transparent dark:from-slate-900/60 dark:to-transparent">
+        <!-- Ambient Decorative Glows -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                <div class="max-w-3xl">
+                    <!-- Status Badges -->
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Active Daemon v2.4
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                            <i class="fa-solid fa-server"></i> Multi-Vendor Lab Verified
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                            <i class="fa-solid fa-circle-check"></i> CI/CD Passing
+                        </span>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Asynchronous Network Telemetry Poller
+                    </h1>
+                    <p class="mt-3 text-lg text-slate-600 dark:text-slate-300 font-normal">
+                        Engineering Showcase &amp; Interactive Project Artifact (2024–2026)
+                    </p>
+
+                    <!-- Author & Metainfo -->
+                    <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-700 dark:text-slate-200">
+                                AS
+                            </div>
+                            <span>Author: <strong class="text-slate-800 dark:text-slate-200">Alex Shields-Weber</strong></span>
+                        </div>
+                        <span class="hidden sm:inline">•</span>
+                        <div class="flex items-center gap-1.5">
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>8-Month Development Cycle</span>
+                        </div>
+                        <span class="hidden sm:inline">•</span>
+                        <div class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-bolt text-amber-500"></i>
+                            <span>AsyncIO High-Throughput Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Summary Card -->
+                <div class="w-full lg:w-80 glass-card rounded-2xl p-5 shadow-xl">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800 mb-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">System Performance</span>
+                        <span class="text-xs font-mono text-brand-500 font-bold">REAL-TIME METRICS</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/60">
+                            <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">10K+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Metrics / Sec</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/60">
+                            <div class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">&lt; 35ms</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Ingestion Latency</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/60">
+                            <div class="text-2xl font-extrabold text-brand-600 dark:text-brand-400 font-mono">99.98%</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Poll Reliability</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/60">
+                            <div class="text-2xl font-extrabold text-purple-600 dark:text-purple-400 font-mono">500+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nodes Polled</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Architecture Diagram Section -->
+    <section id="architecture" class="py-12 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold mb-2">
+                    <i class="fa-solid fa-diagram-project"></i> DATA FLOW VISUALIZER
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">System Architecture &amp; Pipeline Flow</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Interactive topology diagram. Click or hover any subsystem block to inspect technical specifications and live payload schemas.</p>
+            </div>
+
+            <!-- Main Diagram Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- SVG Visual Canvas -->
+                <div class="lg:col-span-8 glass-card rounded-2xl p-6 shadow-xl relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">End-to-End Ingestion Pipeline</span>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-ping"></span>
+                            <span>Live Signal Flow Active</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full overflow-x-auto">
+                        <svg id="architectureSvg" viewBox="0 0 800 360" class="w-full h-auto min-w-[650px] select-none">
+                            <defs>
+                                <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0284c7"></stop>
+                                    <stop offset="100%" stop-color="#38bdf8"></stop>
+                                </linearGradient>
+                                <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#d97706"></stop>
+                                    <stop offset="100%" stop-color="#fbbf24"></stop>
+                                </linearGradient>
+                                <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7e22ce"></stop>
+                                    <stop offset="100%" stop-color="#c084fc"></stop>
+                                </linearGradient>
+                                <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#15803d"></stop>
+                                    <stop offset="100%" stop-color="#4ade80"></stop>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Connecting Data Stream Paths -->
+                            <!-- Path 1: Devices to Poller -->
+                            <path d="M 130 180 L 230 180" stroke="#0284c7" stroke-width="3" fill="none" class="data-stream-path"></path>
+                            
+                            <!-- Path 2: Poller to PostgreSQL -->
+                            <path d="M 370 180 L 460 110" stroke="#d97706" stroke-width="3" fill="none" class="data-stream-path"></path>
+                            
+                            <!-- Path 3: Poller to Splunk HEC -->
+                            <path d="M 370 180 L 460 250" stroke="#7e22ce" stroke-width="3" fill="none" class="data-stream-path"></path>
+
+                            <!-- Path 4: PostgreSQL to API Layer -->
+                            <path d="M 580 110 L 670 180" stroke="#4ade80" stroke-width="3" fill="none" class="data-stream-path"></path>
+
+                            <!-- Path 5: Splunk to API Layer -->
+                            <path d="M 580 250 L 670 180" stroke="#4ade80" stroke-width="3" fill="none" class="data-stream-path"></path>
+
+                            <!-- NODE 1: Network Devices -->
+                            <g class="arch-node cursor-pointer transition-transform duration-200 hover:scale-105" data-node="devices">
+                                <rect x="20" y="125" width="110" height="110" rx="16" fill="url(#grad-cyan)" class="glow-cyan"></rect>
+                                <text x="75" y="165" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">
+                                    <tspan class="fa-solid"></tspan>
+                                </text>
+                                <text x="75" y="195" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">End-Devices</text>
+                                <text x="75" y="212" text-anchor="middle" fill="#e0f2fe" font-size="10">Routers &amp; Switches</text>
+                            </g>
+
+                            <!-- NODE 2: Python Poller Daemons -->
+                            <g class="arch-node cursor-pointer transition-transform duration-200 hover:scale-105" data-node="poller">
+                                <rect x="230" y="125" width="140" height="110" rx="16" fill="url(#grad-amber)" class="glow-amber"></rect>
+                                <text x="300" y="165" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">
+                                    <tspan class="fa-brands"></tspan>
+                                </text>
+                                <text x="300" y="195" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">AsyncIO Poller</text>
+                                <text x="300" y="212" text-anchor="middle" fill="#fef3c7" font-size="10">Python Daemons</text>
+                            </g>
+
+                            <!-- NODE 3: PostgreSQL Database -->
+                            <g class="arch-node cursor-pointer transition-transform duration-200 hover:scale-105" data-node="postgres">
+                                <rect x="460" y="60" width="120" height="100" rx="16" fill="#1e293b" stroke="#0284c7" stroke-width="2" class="glow-cyan"></rect>
+                                <text x="520" y="98" text-anchor="middle" fill="#38bdf8" font-size="22">
+                                    <tspan class="fa-solid"></tspan>
+                                </text>
+                                <text x="520" y="125" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">PostgreSQL</text>
+                                <text x="520" y="142" text-anchor="middle" fill="#94a3b8" font-size="10">Time-Series DB</text>
+                            </g>
+
+                            <!-- NODE 4: Splunk HEC -->
+                            <g class="arch-node cursor-pointer transition-transform duration-200 hover:scale-105" data-node="splunk">
+                                <rect x="460" y="200" width="120" height="100" rx="16" fill="url(#grad-purple)" class="glow-purple"></rect>
+                                <text x="520" y="238" text-anchor="middle" fill="#ffffff" font-size="22">
+                                    <tspan class="fa-solid"></tspan>
+                                </text>
+                                <text x="520" y="265" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Splunk HEC</text>
+                                <text x="520" y="282" text-anchor="middle" fill="#f3e8ff" font-size="10">Alerting Engine</text>
+                            </g>
+
+                            <!-- NODE 5: FastAPI & Dashboard Layer -->
+                            <g class="arch-node cursor-pointer transition-transform duration-200 hover:scale-105" data-node="api">
+                                <rect x="670" y="125" width="110" height="110" rx="16" fill="url(#grad-green)" class="glow-green"></rect>
+                                <text x="725" y="165" text-anchor="middle" fill="#ffffff" font-size="24">
+                                    <tspan class="fa-solid"></tspan>
+                                </text>
+                                <text x="725" y="195" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">FastAPI / UI</text>
+                                <text x="725" y="212" text-anchor="middle" fill="#dcfce7" font-size="10">REST &amp; Dashboards</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Dynamic Inspection Panel -->
+                <div class="lg:col-span-4 glass-card rounded-2xl p-6 shadow-xl border border-slate-200 dark:border-slate-800" id="inspectPanel">
+                    <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
+                        <div class="flex items-center gap-2">
+                            <span id="inspectBadge" class="w-3 h-3 rounded-full bg-brand-500"></span>
+                            <h3 id="inspectTitle" class="text-lg font-bold text-slate-900 dark:text-white">Python AsyncIO Poller</h3>
+                        </div>
+                        <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400" id="inspectCategory">CORE DAEMON</span>
+                    </div>
+
+                    <p id="inspectDescription" class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                        Concurrent worker pool utilizing Python's native <code class="font-mono text-brand-500">asyncio</code> and <code class="font-mono text-brand-500">aiohttp</code> to execute high-density multi-threaded metric polling without blocking I/O loops.
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                            <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Key Specifications</div>
+                            <ul id="inspectSpecs" class="mt-2 text-xs space-y-1 text-slate-700 dark:text-slate-300 font-mono">
+                                <li>• Concurrency: 500 tasks / sec</li>
+                                <li>• Protocol: SSH / NETCONF / RESTCONF</li>
+                                <li>• Timeout Handling: Backoff + Circuit Breaker</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900 text-slate-100 font-mono text-xs overflow-x-auto custom-scrollbar">
+                            <div class="text-[10px] text-slate-400 mb-1 flex justify-between">
+                                <span>SAMPLE PAYLOAD SCHEMA</span>
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <pre id="inspectJson" class="text-emerald-400">{
+  "target": "core-router-01.ord",
+  "interval_ms": 1200,
+  "status": "SUCCESS",
+  "cpu_util": 14.2,
+  "interfaces": ["ge-0/0/0", "ge-0/0/1"]
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Live Telemetry Simulator Section -->
+    <section id="simulator" class="py-12 border-b border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold mb-2">
+                        <i class="fa-solid fa-play"></i> LIVE SIMULATOR
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Asynchronous Telemetry Execution Engine</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Test the async worker daemon in real time. Adjust polling concurrency and multi-vendor targets.</p>
+                </div>
+
+                <!-- Engine Controls -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <button id="startSimBtn" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-md transition">
+                        <i class="fa-solid fa-play"></i>
+                        <span>Start Poller Daemon</span>
+                    </button>
+                    <button id="stopSimBtn" disabled="" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-300 dark:bg-slate-800 text-slate-500 font-semibold text-sm transition cursor-not-allowed">
+                        <i class="fa-solid fa-stop"></i>
+                        <span>Halt Daemon</span>
+                    </button>
+                    <button id="clearLogsBtn" class="p-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Terminal Window & Metrics Stream -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Terminal Screen -->
+                <div class="lg:col-span-8 bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs flex flex-col h-[380px]">
+                    <div class="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center justify-between text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                            <span class="ml-2 font-semibold text-slate-300">async_telemetry_daemon.py [pty]</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-[11px]">
+                            <span>Buffer: <span id="simBufferCount" class="text-brand-400">0</span> pkts</span>
+                            <span id="simStatusBadge" class="px-2 py-0.5 rounded bg-slate-800 text-slate-400">IDLE</span>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Output Console -->
+                    <div id="simConsole" class="p-4 overflow-y-auto space-y-1.5 flex-1 custom-scrollbar text-slate-300 leading-relaxed">
+                        <p class="text-slate-500">[INFO] Asynchronous Telemetry Daemon initialized.</p>
+                        <p class="text-slate-500">[INFO] Ready to spawn asyncio worker tasks across configured targets.</p>
+                        <p class="text-slate-500">[INFO] Click "Start Poller Daemon" above to trigger telemetry stream...</p>
+                    </div>
+                </div>
+
+                <!-- Simulation Settings & Stats -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="glass-card rounded-2xl p-5 shadow-lg">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-3">Daemon Configuration</h4>
+                        
+                        <div class="space-y-4 text-xs">
+                            <div>
+                                <div class="flex justify-between mb-1 text-slate-600 dark:text-slate-400">
+                                    <span>Worker Concurrency limit</span>
+                                    <span font-bold="" id="simConcurrencyVal" class="text-brand-500 font-bold">50 Workers</span>
+                                </div>
+                                <input type="range" id="simConcurrencySlider" min="10" max="200" value="50" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-slate-600 dark:text-slate-400 mb-1">Target Vendor Profiles</label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <label class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center gap-1.5 cursor-pointer bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300">
+                                        <input type="checkbox" checked="" value="Cisco" class="simVendorCheck rounded accent-brand-500">
+                                        <span>Cisco</span>
+                                    </label>
+                                    <label class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center gap-1.5 cursor-pointer bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300">
+                                        <input type="checkbox" checked="" value="Arista" class="simVendorCheck rounded accent-brand-500">
+                                        <span>Arista</span>
+                                    </label>
+                                    <label class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center gap-1.5 cursor-pointer bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300">
+                                        <input type="checkbox" checked="" value="Juniper" class="simVendorCheck rounded accent-brand-500">
+                                        <span>Juniper</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-slate-600 dark:text-slate-400 mb-1">Destination Pipeline Stream</label>
+                                <select id="simDestSelect" class="w-full p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-mono text-xs">
+                                    <option value="both">PostgreSQL &amp; Splunk HEC (Dual Stream)</option>
+                                    <option value="postgres">PostgreSQL Hypertable Only</option>
+                                    <option value="splunk">Splunk HEC Stream Only</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Telemetry Counters -->
+                    <div class="glass-card rounded-2xl p-5 shadow-lg">
+                        <div class="grid grid-cols-2 gap-3 text-center">
+                            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900">
+                                <span class="text-[10px] text-slate-500 uppercase font-bold">SQL Ingested</span>
+                                <div id="simSqlCount" class="text-xl font-bold font-mono text-brand-500">0</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900">
+                                <span class="text-[10px] text-slate-500 uppercase font-bold">Splunk HTTP 200</span>
+                                <div id="simSplunkCount" class="text-xl font-bold font-mono text-purple-500">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack & Proficiency Matrix Section -->
+    <section id="tech-stack" class="py-12 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-semibold mb-2">
+                        <i class="fa-solid fa-layer-group"></i> COMPETENCY MATRIX
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Tech Stack &amp; Technical Proficiency</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Tools, frameworks, and methodologies utilized throughout the 8-month development lifecycle.</p>
+                </div>
+
+                <!-- Filter Pills -->
+                <div class="flex flex-wrap items-center gap-2" id="techFilterContainer">
+                    <button data-filter="all" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white shadow-sm transition">All Skills</button>
+                    <button data-filter="Core" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Core</button>
+                    <button data-filter="Data" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Data</button>
+                    <button data-filter="Monitoring" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Monitoring</button>
+                    <button data-filter="DevOps" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">DevOps</button>
+                    <button data-filter="Backend" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Backend</button>
+                    <button data-filter="Domain" class="tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Domain</button>
+                </div>
+            </div>
+
+            <!-- Grid Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="techStackGrid"><div class="glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-400 text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="fa-brands fa-python"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Python Development</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Core</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    Py
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Built asynchronous data collectors, daemon scripts, custom log parsing routines using asyncio and standard library tooling.
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">95%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">asyncio event loops</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">aiohttp connection pooling</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">custom log parsers</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">memory profiling</span>
+                            </div>
+                        </div>
+                    </div><div class="glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">PostgreSQL Schemas</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Data</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    PG
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Designed normalized relational schemas, index strategies for time-series data, and written optimized SQL query workflows.
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">90%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">TimescaleDB hypertables</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">BRIN indexing</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Partitioning triggers</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">JSONB telemetry columns</span>
+                            </div>
+                        </div>
+                    </div><div class="glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Splunk Telemetry</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Monitoring</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    Sp
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Engineered HTTP Event Collector (HEC) JSON streams, constructed dashboard visualizations, and defined trigger thresholds.
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">88%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Splunk HEC tokens</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Real-time alerting</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">SPL dashboards</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Batch event formatting</span>
+                            </div>
+                        </div>
+                    </div><div class="glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-500 text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Git &amp; CI/CD Pipelines</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">DevOps</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    Git
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Managed parallel version control across a 4-person team using branch protection rules, GitHub Actions, and PR code reviews.
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">92%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">GitHub Actions</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Branch protection rules</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Pytest integration</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Docker automated builds</span>
+                            </div>
+                        </div>
+                    </div><div class="glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-400 text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="fa-solid fa-server"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">RESTful Services</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Backend</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    API
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Structured FastAPI JSON endpoints providing secure access to live router metrics, database records, and health checks.
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">85%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">FastAPI async routes</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Pydantic validation</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Bearer auth</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">OpenAPI documentation</span>
+                            </div>
+                        </div>
+                    </div><div class="glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-cyan-400 text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="fa-solid fa-network-wired"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Network Automation</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">Domain</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    Net
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Multi-vendor equipment configuration, interface state verification, telemetry aggregation, and automated error logging.
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">94%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-brand-600 to-cyan-400 rounded-full" style="width: 94%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Cisco IOS-XE / Arista EOS / Juniper JunOS</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">CLI regex extraction</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">Interface telemetry</span><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">BGP peer health</span>
+                            </div>
+                        </div>
+                    </div></div>
+        </div>
+    </section>
+
+    <!-- Multi-Year Interactive Timeline (2024 - 2026) -->
+    <section id="timeline" class="py-12 border-b border-slate-200 dark:border-slate-800 bg-slate-100/40 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold mb-2">
+                        <i class="fa-solid fa-timeline"></i> DEVELOPMENT ROADMAP
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Multi-Year Development Timeline</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Chronological evolution from initial architecture PoC to production deployment.</p>
+                </div>
+
+                <!-- Year Filter Buttons -->
+                <div class="flex items-center gap-2" id="yearFilterContainer">
+                    <button data-year="all" class="year-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white transition">All Years</button>
+                    <button data-year="2024" class="year-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">2024</button>
+                    <button data-year="2025" class="year-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">2025</button>
+                    <button data-year="2026" class="year-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">2026</button>
+                </div>
+            </div>
+
+            <!-- Timeline Cards Container -->
+            <div class="relative pl-6 md:pl-10 border-l-2 border-slate-300 dark:border-slate-800 space-y-8" id="timelineList"><div class="relative group">
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-slate-50 dark:border-slate-950 bg-brand-500 shadow"></div>
+
+                        <!-- Content Card -->
+                        <div class="glass-card rounded-2xl p-6 shadow-md border border-slate-200 dark:border-slate-800 transition">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-md text-xs font-bold font-mono bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                                        Phase 1
+                                    </span>
+                                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                                        Oct 2024 - Dec 2024
+                                    </span>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-emerald-500/10 text-emerald-500 border-emerald-500/20">
+                                    Completed
+                                </span>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                Project Inception &amp; Architectural Blueprint
+                            </h3>
+
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Requirements gathering, database schema drafting, and initial asyncio poller proof-of-concept benchmark testing.
+                            </p>
+
+                            <!-- Accordion Button -->
+                            <button class="timeline-toggle-btn inline-flex items-center gap-2 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline focus:outline-none">
+                                <span>Deep Dive Details</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                            </button>
+
+                            <!-- Accordion Drawer -->
+                            <div class="accordion-content mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                <p class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                                    Formulated the asynchronous multi-threaded architecture to solve scaling bottlenecks present in legacy SNMP pollers. Designed the initial Python asyncio connection worker pool with connection throttling, circuit breakers, and schema drafts for time-series SQL tables.
+                                </p>
+                            </div>
+                        </div>
+                    </div><div class="relative group">
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-slate-50 dark:border-slate-950 bg-brand-500 shadow"></div>
+
+                        <!-- Content Card -->
+                        <div class="glass-card rounded-2xl p-6 shadow-md border border-slate-200 dark:border-slate-800 transition">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-md text-xs font-bold font-mono bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                                        Phase 2
+                                    </span>
+                                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                                        Jan 2025 - Jun 2025
+                                    </span>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-emerald-500/10 text-emerald-500 border-emerald-500/20">
+                                    Completed
+                                </span>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                Pipeline &amp; Telemetry Ingestion Layer
+                            </h3>
+
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                PostgreSQL hypertable normalization, Splunk HEC HTTP streaming integration, and GitHub Actions workflow setup.
+                            </p>
+
+                            <!-- Accordion Button -->
+                            <button class="timeline-toggle-btn inline-flex items-center gap-2 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline focus:outline-none">
+                                <span>Deep Dive Details</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                            </button>
+
+                            <!-- Accordion Drawer -->
+                            <div class="accordion-content mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                <p class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                                    Configured PostgreSQL with TimescaleDB extension to handle high-frequency timestamped telemetry data. Built HTTP Event Collector (HEC) integration scripts for Splunk alerting and set up a robust CI/CD pipeline enforcing branch protection rules and automated Pytest execution.
+                                </p>
+                            </div>
+                        </div>
+                    </div><div class="relative group">
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-slate-50 dark:border-slate-950 bg-brand-500 shadow"></div>
+
+                        <!-- Content Card -->
+                        <div class="glass-card rounded-2xl p-6 shadow-md border border-slate-200 dark:border-slate-800 transition">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-md text-xs font-bold font-mono bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                                        Phase 3
+                                    </span>
+                                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                                        Jul 2025 - Dec 2025
+                                    </span>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-emerald-500/10 text-emerald-500 border-emerald-500/20">
+                                    Completed
+                                </span>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                FastAPI REST Layer &amp; Live Dashboard UI
+                            </h3>
+
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                FastAPI JSON endpoints, frontend metric visualization, multi-device polling concurrency refinement.
+                            </p>
+
+                            <!-- Accordion Button -->
+                            <button class="timeline-toggle-btn inline-flex items-center gap-2 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline focus:outline-none">
+                                <span>Deep Dive Details</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                            </button>
+
+                            <!-- Accordion Drawer -->
+                            <div class="accordion-content mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                <p class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                                    Exposed real-time device health metrics through FastAPI REST routes. Optimized async database connection pools under heavy concurrent read/write loads and integrated frontend metric dashboards displaying live throughput.
+                                </p>
+                            </div>
+                        </div>
+                    </div><div class="relative group">
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-slate-50 dark:border-slate-950 bg-brand-500 shadow"></div>
+
+                        <!-- Content Card -->
+                        <div class="glass-card rounded-2xl p-6 shadow-md border border-slate-200 dark:border-slate-800 transition">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-md text-xs font-bold font-mono bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                                        Phase 4
+                                    </span>
+                                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                                        Jan 2026 - Present
+                                    </span>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border bg-brand-500/10 text-brand-500 border-brand-500/20">
+                                    Active Build
+                                </span>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                Production Deployment &amp; Showcase Artifacts
+                            </h3>
+
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                Final code refactoring, query optimization, documentation &amp; single-file artifact exporter.
+                            </p>
+
+                            <!-- Accordion Button -->
+                            <button class="timeline-toggle-btn inline-flex items-center gap-2 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline focus:outline-none">
+                                <span>Deep Dive Details</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                            </button>
+
+                            <!-- Accordion Drawer -->
+                            <div class="accordion-content mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                <p class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                                    Finalized enterprise production validation across multi-vendor lab environments. Packaged all project documentation, architecture diagrams, live code snippets, and deployment tools into this self-contained single-file interactive artifact.
+                                </p>
+                            </div>
+                        </div>
+                    </div></div>
+        </div>
+    </section>
+
+    <!-- Interactive Code Snippet Viewer Section -->
+    <section id="snippets" class="py-12 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-2">
+                        <i class="fa-solid fa-code"></i> ARTIFACT REPOSITORY
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Core Source Code Snippets</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Inspected and executable code blocks for polling daemons, SQL schemas, and CI/CD workflows.</p>
+                </div>
+
+                <!-- Copy Active Code Button -->
+                <button id="copySnippetBtn" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Active Snippet</span>
+                </button>
+            </div>
+
+            <!-- Code Viewer Card -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden">
+                <!-- Snippet Navigation Tabs -->
+                <div class="flex flex-wrap items-center bg-slate-950 px-4 pt-3 border-b border-slate-800 gap-2" id="snippetTabContainer">
+                    <button data-tab="poller" class="snippet-tab px-4 py-2 text-xs font-mono rounded-t-lg bg-slate-900 text-brand-400 border-t-2 border-brand-500 font-bold transition flex items-center gap-2">
+                        <i class="fa-brands fa-python text-amber-400"></i>
+                        <span>async_poller.py</span>
+                    </button>
+                    <button data-tab="sql" class="snippet-tab px-4 py-2 text-xs font-mono rounded-t-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-2">
+                        <i class="fa-solid fa-database text-blue-400"></i>
+                        <span>schema_migration.sql</span>
+                    </button>
+                    <button data-tab="cicd" class="snippet-tab px-4 py-2 text-xs font-mono rounded-t-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-2">
+                        <i class="fa-solid fa-gears text-purple-400"></i>
+                        <span>github_ci.yml</span>
+                    </button>
+                </div>
+
+                <!-- Snippet Meta Bar -->
+                <div class="px-6 py-2.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <span id="snippetPath" class="text-slate-300">src/daemons/async_poller.py</span>
+                    <span id="snippetLang" class="text-brand-400 font-bold">PYTHON 3.11+</span>
+                </div>
+
+                <!-- Code Pre/Code Block -->
+                <div class="p-6 overflow-x-auto custom-scrollbar font-mono text-xs leading-relaxed max-h-[480px]">
+                    <pre id="codeDisplay" class="text-slate-200">import asyncio
+import aiohttp
+import logging
+import time
+from typing import Dict, List, Any
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
+class AsyncTelemetryPoller:
+    """Asynchronous telemetry daemon for multi-vendor network devices."""
+    
+    def __init__(self, targets: List[Dict[str, Any]], max_concurrency: int = 50):
+        self.targets = targets
+        self.semaphore = asyncio.Semaphore(max_concurrency)
+        self.session = None
+
+    async def poll_device(self, target: Dict[str, Any]) -&gt; Dict[str, Any]:
+        """Polls single network device RESTCONF interface with async semaphore rate-limiting."""
+        async with self.semaphore:
+            url = f"https://{target['ip']}/restconf/data/ietf-interfaces:interfaces-state"
+            headers = {"Accept": "application/yang-data+json"}
+            
+            start_time = time.time()
+            try:
+                async with self.session.get(url, headers=headers, timeout=5, ssl=False) as resp:
+                    latency = (time.time() - start_time) * 1000
+                    if resp.status == 200:
+                        data = await resp.json()
+                        return {
+                            "host": target["hostname"],
+                            "status": "SUCCESS",
+                            "latency_ms": round(latency, 2),
+                            "payload": data
+                        }
+                    return {"host": target["hostname"], "status": f"HTTP_{resp.status}"}
+            except Exception as err:
+                return {"host": target["hostname"], "status": "ERROR", "error": str(err)}
+
+    async def run(self):
+        """Spawns asyncio task gathering loop."""
+        async with aiohttp.ClientSession() as session:
+            self.session = session
+            tasks = [self.poll_device(t) for t in self.targets]
+            results = await asyncio.gather(*tasks)
+            logging.info(f"Successfully polled {len(results)} target devices.")
+            return results
+
+if __name__ == "__main__":
+    inventory = [{"hostname": f"router-0{i}", "ip": f"10.0.0.{i}"} for i in range(1, 101)]
+    poller = AsyncTelemetryPoller(inventory, max_concurrency=20)
+    asyncio.run(poller.run())</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Source Exporter Modal -->
+    <div id="exportModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full p-6 shadow-2xl relative flex flex-col max-h-[90vh]">
+            <!-- Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div class="flex items-center gap-2 text-white">
+                    <i class="fa-solid fa-file-code text-brand-400 text-xl"></i>
+                    <h3 class="text-lg font-bold">Artifact Source Exporter</h3>
+                </div>
+                <button id="closeModalBtn" class="p-2 text-slate-400 hover:text-white rounded-lg transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="py-4 space-y-4 flex-1 overflow-y-auto">
+                <p class="text-sm text-slate-300">
+                    This self-contained single-file HTML artifact bundles all interactive diagrams, timeline items, simulation scripts, and styles. You can copy the underlying source code or save it directly.
+                </p>
+
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                    <div class="flex justify-between items-center mb-2 text-xs font-mono text-slate-400">
+                        <span>PROJECT TEMPLATE ARCHIVE</span>
+                        <span>SINGLE_FILE_PACKAGE.HTML</span>
+                    </div>
+                    <pre class="text-xs font-mono text-emerald-400 overflow-x-auto max-h-48 p-2 bg-slate-900/50 rounded leading-relaxed">&lt;!-- Asynchronous Network Telemetry Poller Showcase --&gt;
+&lt;!-- Author: Alex Shields-Weber (2024-2026) --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en" class="dark"&gt;
+  &lt;!-- Complete Embedded Application Bundle --&gt;
+...</pre>
+                </div>
+            </div>
+
+            <!-- Modal Footer Actions -->
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-end gap-3">
+                <button id="copyFullSourceBtn" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs flex items-center gap-2 transition">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>Copy Full HTML Code</span>
+                </button>
+                <button id="closeModalFooterBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-lg bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-xs">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <span>© 2024–2026 <strong>Alex Shields-Weber</strong>. Asynchronous Network Telemetry Poller Showcase.</span>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <span>Self-Contained Single-File Application</span>
+                <span class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> System Nominal
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Theme Management Logic
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const themeIcon = document.getElementById('themeIcon');
+            const htmlElement = document.documentElement;
+
+            function setTheme(isDark) {
+                if (isDark) {
+                    htmlElement.classList.add('dark');
+                    themeIcon.className = 'fa-solid fa-sun text-amber-400';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    htmlElement.classList.remove('dark');
+                    themeIcon.className = 'fa-solid fa-moon text-slate-600';
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            // Detect preferred theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                setTheme(true);
+            } else {
+                setTheme(false);
+            }
+
+            themeToggleBtn.addEventListener('click', () => {
+                setTheme(!htmlElement.classList.contains('dark'));
+            });
+
+            const techData = [
+                {
+                    id: 'py',
+                    name: 'Python Development',
+                    badge: 'Py',
+                    category: 'Core',
+                    icon: 'fa-brands fa-python',
+                    color: 'from-amber-500 to-yellow-400',
+                    level: 95,
+                    description: 'Built asynchronous data collectors, daemon scripts, custom log parsing routines using asyncio and standard library tooling.',
+                    specs: ['asyncio event loops', 'aiohttp connection pooling', 'custom log parsers', 'memory profiling']
+                },
+                {
+                    id: 'pg',
+                    name: 'PostgreSQL Schemas',
+                    badge: 'PG',
+                    category: 'Data',
+                    icon: 'fa-solid fa-database',
+                    color: 'from-blue-600 to-cyan-500',
+                    level: 90,
+                    description: 'Designed normalized relational schemas, index strategies for time-series data, and written optimized SQL query workflows.',
+                    specs: ['TimescaleDB hypertables', 'BRIN indexing', 'Partitioning triggers', 'JSONB telemetry columns']
+                },
+                {
+                    id: 'sp',
+                    name: 'Splunk Telemetry',
+                    badge: 'Sp',
+                    category: 'Monitoring',
+                    icon: 'fa-solid fa-chart-line',
+                    color: 'from-pink-500 to-rose-500',
+                    level: 88,
+                    description: 'Engineered HTTP Event Collector (HEC) JSON streams, constructed dashboard visualizations, and defined trigger thresholds.',
+                    specs: ['Splunk HEC tokens', 'Real-time alerting', 'SPL dashboards', 'Batch event formatting']
+                },
+                {
+                    id: 'git',
+                    name: 'Git & CI/CD Pipelines',
+                    badge: 'Git',
+                    category: 'DevOps',
+                    icon: 'fa-brands fa-github',
+                    color: 'from-purple-600 to-indigo-500',
+                    level: 92,
+                    description: 'Managed parallel version control across a 4-person team using branch protection rules, GitHub Actions, and PR code reviews.',
+                    specs: ['GitHub Actions', 'Branch protection rules', 'Pytest integration', 'Docker automated builds']
+                },
+                {
+                    id: 'api',
+                    name: 'RESTful Services',
+                    badge: 'API',
+                    category: 'Backend',
+                    icon: 'fa-solid fa-server',
+                    color: 'from-emerald-500 to-teal-400',
+                    level: 85,
+                    description: 'Structured FastAPI JSON endpoints providing secure access to live router metrics, database records, and health checks.',
+                    specs: ['FastAPI async routes', 'Pydantic validation', 'Bearer auth', 'OpenAPI documentation']
+                },
+                {
+                    id: 'net',
+                    name: 'Network Automation',
+                    badge: 'Net',
+                    category: 'Domain',
+                    icon: 'fa-solid fa-network-wired',
+                    color: 'from-brand-600 to-cyan-400',
+                    level: 94,
+                    description: 'Multi-vendor equipment configuration, interface state verification, telemetry aggregation, and automated error logging.',
+                    specs: ['Cisco IOS-XE / Arista EOS / Juniper JunOS', 'CLI regex extraction', 'Interface telemetry', 'BGP peer health']
+                }
+            ];
+
+            const techStackGrid = document.getElementById('techStackGrid');
+            const techFilterBtns = document.querySelectorAll('.tech-filter-btn');
+
+            function renderTechStack(filter = 'all') {
+                techStackGrid.innerHTML = '';
+                const filtered = filter === 'all' ? techData : techData.filter(t => t.category === filter);
+
+                filtered.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'glass-card rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-200 border border-slate-200 dark:border-slate-800 flex flex-col justify-between';
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br ${item.color} text-white flex items-center justify-center text-lg font-bold shadow">
+                                        <i class="${item.icon}"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-slate-900 dark:text-white">${item.name}</h3>
+                                        <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">${item.category}</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                    ${item.badge}
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                ${item.description}
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Progress Bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+                                    <span>Proficiency Rating</span>
+                                    <span class="font-mono">${item.level}%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r ${item.color} rounded-full" style="width: ${item.level}%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1">
+                                ${item.specs.map(s => `<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-900 text-[10px] text-slate-600 dark:text-slate-400 font-mono">${s}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                    techStackGrid.appendChild(card);
+                });
+            }
+
+            renderTechStack('all');
+
+            techFilterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    techFilterBtns.forEach(b => b.className = 'tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition');
+                    btn.className = 'tech-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white shadow-sm transition';
+                    renderTechStack(btn.dataset.filter);
+                });
+            });
+
+            const nodeDetails = {
+                devices: {
+                    title: "Network End-Devices",
+                    category: "DATA SOURCES",
+                    badgeColor: "bg-brand-500",
+                    description: "Multi-vendor router and switch infrastructure (Cisco IOS-XE, Arista EOS, Juniper JunOS) delivering interface stats, CPU metrics, and BGP telemetry.",
+                    specs: [
+                        "• Transport: SSH, NETCONF, gRPC streaming",
+                        "• Inventory: 500+ active core & edge nodes",
+                        "• Polling Window: 10s interval sampling"
+                    ],
+                    json: `{\n  "device_id": "rtr-chi-01",\n  "vendor": "Cisco IOS-XE",\n  "uptime_sec": 849200,\n  "interfaces": [\n    {"name": "Gi0/0/0", "status": "UP", "rx_kbps": 4820}\n  ]\n}`
+                },
+                poller: {
+                    title: "Python AsyncIO Poller",
+                    category: "CORE DAEMON",
+                    badgeColor: "bg-amber-500",
+                    description: "High-density asynchronous polling daemon built with Python asyncio, managing worker tasks, rate-limiting semaphores, and structured error handlers.",
+                    specs: [
+                        "• Concurrency: 200 tasks per thread worker",
+                        "• Resiliency: Exponential backoff retries",
+                        "• Memory Footprint: < 85MB per daemon container"
+                    ],
+                    json: `{\n  "worker_id": "poller-node-04",\n  "active_tasks": 142,\n  "poll_latency_ms": 28.4,\n  "failed_retries": 0\n}`
+                },
+                postgres: {
+                    title: "PostgreSQL Time-Series",
+                    category: "STORAGE LAYER",
+                    badgeColor: "bg-blue-500",
+                    description: "Partitioned time-series relational datastore configured with TimescaleDB hypertables, custom indexes, and automated retention policies.",
+                    specs: [
+                        "• Table Strategy: Hypertable partitioned by time",
+                        "• Retention: 90 days rolling raw metric store",
+                        "• Indexing: BRIN on timestamp, B-tree on device_id"
+                    ],
+                    json: `{\n  "query_time_ms": 4.1,\n  "rows_inserted": 1250,\n  "compression_ratio": "4.2x",\n  "partition": "metrics_2026_q1"\n}`
+                },
+                splunk: {
+                    title: "Splunk HEC Engine",
+                    category: "ALERTING & LOGS",
+                    badgeColor: "bg-purple-500",
+                    description: "Direct streaming pipeline sending formatted JSON metrics to Splunk HTTP Event Collector (HEC) endpoints for trigger alerting.",
+                    specs: [
+                        "• Protocol: HTTPS POST /services/collector/event",
+                        "• Payload: Compact JSON telemetry events",
+                        "• Alert Rules: CPU > 85%, Link Flaps, BGP Down"
+                    ],
+                    json: `{\n  "event": "INTERFACE_DOWN",\n  "severity": "CRITICAL",\n  "host": "rtr-chi-01",\n  "splunk_hec_status": "200_OK"\n}`
+                },
+                api: {
+                    title: "FastAPI REST & UI Layer",
+                    category: "BACKEND & VISUALS",
+                    badgeColor: "bg-emerald-500",
+                    description: "Asynchronous REST web services exposing telemetry query endpoints and driving interactive web dashboard visualizers.",
+                    specs: [
+                        "• Framework: FastAPI + Uvicorn ASGI",
+                        "• Auth: JWT Token + OAuth2 Bearer",
+                        "• Response Time: < 15ms p95 query latency"
+                    ],
+                    json: `{\n  "endpoint": "/api/v1/metrics/latest",\n  "status": 200,\n  "cached": true,\n  "execution_sec": 0.003\n}`
+                }
+            };
+
+            const archNodes = document.querySelectorAll('.arch-node');
+            const inspectTitle = document.getElementById('inspectTitle');
+            const inspectCategory = document.getElementById('inspectCategory');
+            const inspectBadge = document.getElementById('inspectBadge');
+            const inspectDescription = document.getElementById('inspectDescription');
+            const inspectSpecs = document.getElementById('inspectSpecs');
+            const inspectJson = document.getElementById('inspectJson');
+
+            archNodes.forEach(node => {
+                node.addEventListener('click', () => {
+                    const key = node.dataset.node;
+                    const data = nodeDetails[key];
+                    if (!data) return;
+
+                    inspectTitle.textContent = data.title;
+                    inspectCategory.textContent = data.category;
+                    inspectBadge.className = `w-3 h-3 rounded-full ${data.badgeColor}`;
+                    inspectDescription.textContent = data.description;
+                    inspectSpecs.innerHTML = data.specs.map(s => `<li>${s}</li>`).join('');
+                    inspectJson.textContent = data.json;
+                });
+            });
+
+            const startSimBtn = document.getElementById('startSimBtn');
+            const stopSimBtn = document.getElementById('stopSimBtn');
+            const clearLogsBtn = document.getElementById('clearLogsBtn');
+            const simConsole = document.getElementById('simConsole');
+            const simConcurrencySlider = document.getElementById('simConcurrencySlider');
+            const simConcurrencyVal = document.getElementById('simConcurrencyVal');
+            const simStatusBadge = document.getElementById('simStatusBadge');
+            const simBufferCount = document.getElementById('simBufferCount');
+            const simSqlCount = document.getElementById('simSqlCount');
+            const simSplunkCount = document.getElementById('simSplunkCount');
+
+            let simInterval = null;
+            let packetCount = 0;
+            let sqlTotal = 0;
+            let splunkTotal = 0;
+
+            simConcurrencySlider.addEventListener('input', (e) => {
+                simConcurrencyVal.textContent = `${e.target.value} Workers`;
+            });
+
+            function appendConsoleLog(msg, type = 'info') {
+                const p = document.createElement('p');
+                const time = new Date().toLocaleTimeString();
+                if (type === 'success') {
+                    p.className = 'text-emerald-400 font-mono';
+                } else if (type === 'warn') {
+                    p.className = 'text-amber-400 font-mono';
+                } else if (type === 'purple') {
+                    p.className = 'text-purple-400 font-mono';
+                } else {
+                    p.className = 'text-slate-300 font-mono';
+                }
+                p.textContent = `[${time}] ${msg}`;
+                simConsole.appendChild(p);
+                simConsole.scrollTop = simConsole.scrollHeight;
+            }
+
+            startSimBtn.addEventListener('click', () => {
+                if (simInterval) return;
+
+                startSimBtn.disabled = true;
+                startSimBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                stopSimBtn.disabled = false;
+                stopSimBtn.classList.remove('opacity-50', 'cursor-not-allowed', 'bg-slate-300', 'dark:bg-slate-800', 'text-slate-500');
+                stopSimBtn.classList.add('bg-red-600', 'text-white', 'hover:bg-red-500');
+
+                simStatusBadge.className = 'px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30';
+                simStatusBadge.textContent = 'POLLING ACTIVE';
+
+                appendConsoleLog('[DAEMON] Starting asyncio worker loop...', 'info');
+
+                const selectedVendors = Array.from(document.querySelectorAll('.simVendorCheck:checked')).map(c => c.value);
+                if (selectedVendors.length === 0) selectedVendors.push('Cisco');
+
+                simInterval = setInterval(() => {
+                    const vendor = selectedVendors[Math.floor(Math.random() * selectedVendors.length)];
+                    const routerId = `${vendor.toLowerCase()}-rtr-0${Math.floor(Math.random() * 9) + 1}`;
+                    const cpu = (Math.random() * 40 + 10).toFixed(1);
+                    const latency = (Math.random() * 15 + 12).toFixed(1);
+
+                    packetCount++;
+                    sqlTotal += 1;
+                    splunkTotal += 1;
+
+                    simBufferCount.textContent = packetCount;
+                    simSqlCount.textContent = sqlTotal;
+                    simSplunkCount.textContent = splunkTotal;
+
+                    const randType = Math.random();
+                    if (randType > 0.7) {
+                        appendConsoleLog(`[SPLUNK HEC] HTTP 200 OK -> Event POST target=${routerId} cpu=${cpu}% latency=${latency}ms`, 'purple');
+                    } else if (randType > 0.3) {
+                        appendConsoleLog(`[PG SQL] INSERT INTO telemetry_hypertable (${routerId}, cpu=${cpu}%) RETURNING id`, 'success');
+                    } else {
+                        appendConsoleLog(`[ASYNC POLL] Worker #${Math.floor(Math.random()*20)} fetched metrics for ${routerId} (${vendor})`, 'info');
+                    }
+                }, 400);
+            });
+
+            stopSimBtn.addEventListener('click', () => {
+                if (!simInterval) return;
+                clearInterval(simInterval);
+                simInterval = null;
+
+                startSimBtn.disabled = false;
+                startSimBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                stopSimBtn.disabled = true;
+                stopSimBtn.className = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-300 dark:bg-slate-800 text-slate-500 font-semibold text-sm transition cursor-not-allowed';
+
+                simStatusBadge.className = 'px-2 py-0.5 rounded bg-slate-800 text-slate-400';
+                simStatusBadge.textContent = 'HALTED';
+
+                appendConsoleLog('[DAEMON] Worker pool gracefully shutdown.', 'warn');
+            });
+
+            clearLogsBtn.addEventListener('click', () => {
+                simConsole.innerHTML = '<p class="text-slate-500">[INFO] Console cleared.</p>';
+            });
+
+            const timelineData = [
+                {
+                    phase: 'Phase 1',
+                    period: 'Oct 2024 - Dec 2024',
+                    year: '2024',
+                    title: 'Project Inception & Architectural Blueprint',
+                    status: 'Completed',
+                    statusColor: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
+                    summary: 'Requirements gathering, database schema drafting, and initial asyncio poller proof-of-concept benchmark testing.',
+                    details: 'Formulated the asynchronous multi-threaded architecture to solve scaling bottlenecks present in legacy SNMP pollers. Designed the initial Python asyncio connection worker pool with connection throttling, circuit breakers, and schema drafts for time-series SQL tables.'
+                },
+                {
+                    phase: 'Phase 2',
+                    period: 'Jan 2025 - Jun 2025',
+                    year: '2025',
+                    title: 'Pipeline & Telemetry Ingestion Layer',
+                    status: 'Completed',
+                    statusColor: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
+                    summary: 'PostgreSQL hypertable normalization, Splunk HEC HTTP streaming integration, and GitHub Actions workflow setup.',
+                    details: 'Configured PostgreSQL with TimescaleDB extension to handle high-frequency timestamped telemetry data. Built HTTP Event Collector (HEC) integration scripts for Splunk alerting and set up a robust CI/CD pipeline enforcing branch protection rules and automated Pytest execution.'
+                },
+                {
+                    phase: 'Phase 3',
+                    period: 'Jul 2025 - Dec 2025',
+                    year: '2025',
+                    title: 'FastAPI REST Layer & Live Dashboard UI',
+                    status: 'Completed',
+                    statusColor: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
+                    summary: 'FastAPI JSON endpoints, frontend metric visualization, multi-device polling concurrency refinement.',
+                    details: 'Exposed real-time device health metrics through FastAPI REST routes. Optimized async database connection pools under heavy concurrent read/write loads and integrated frontend metric dashboards displaying live throughput.'
+                },
+                {
+                    phase: 'Phase 4',
+                    period: 'Jan 2026 - Present',
+                    year: '2026',
+                    title: 'Production Deployment & Showcase Artifacts',
+                    status: 'Active Build',
+                    statusColor: 'bg-brand-500/10 text-brand-500 border-brand-500/20',
+                    summary: 'Final code refactoring, query optimization, documentation & single-file artifact exporter.',
+                    details: 'Finalized enterprise production validation across multi-vendor lab environments. Packaged all project documentation, architecture diagrams, live code snippets, and deployment tools into this self-contained single-file interactive artifact.'
+                }
+            ];
+
+            const timelineList = document.getElementById('timelineList');
+            const yearFilterBtns = document.querySelectorAll('.year-filter-btn');
+
+            function renderTimeline(yearFilter = 'all') {
+                timelineList.innerHTML = '';
+                const filtered = yearFilter === 'all' ? timelineData : timelineData.filter(t => t.year === yearFilter);
+
+                filtered.forEach((item, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'relative group';
+                    card.innerHTML = `
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-slate-50 dark:border-slate-950 bg-brand-500 shadow"></div>
+
+                        <!-- Content Card -->
+                        <div class="glass-card rounded-2xl p-6 shadow-md border border-slate-200 dark:border-slate-800 transition">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-md text-xs font-bold font-mono bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                                        ${item.phase}
+                                    </span>
+                                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                                        ${item.period}
+                                    </span>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border ${item.statusColor}">
+                                    ${item.status}
+                                </span>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                ${item.title}
+                            </h3>
+
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                                ${item.summary}
+                            </p>
+
+                            <!-- Accordion Button -->
+                            <button class="timeline-toggle-btn inline-flex items-center gap-2 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline focus:outline-none">
+                                <span>Deep Dive Details</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                            </button>
+
+                            <!-- Accordion Drawer -->
+                            <div class="accordion-content mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                <p class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                                    ${item.details}
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                    timelineList.appendChild(card);
+                });
+
+                // Attach Accordion Event Handlers
+                document.querySelectorAll('.timeline-toggle-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const content = btn.nextElementSibling;
+                        const icon = btn.querySelector('i');
+                        const isExpanded = content.classList.contains('expanded');
+
+                        if (isExpanded) {
+                            content.classList.remove('expanded');
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            content.classList.add('expanded');
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                });
+            }
+
+            renderTimeline('all');
+
+            yearFilterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    yearFilterBtns.forEach(b => b.className = 'year-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition');
+                    btn.className = 'year-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white transition';
+                    renderTimeline(btn.dataset.year);
+                });
+            });
+
+            const snippetsData = {
+                poller: {
+                    path: 'src/daemons/async_poller.py',
+                    lang: 'PYTHON 3.11+',
+                    code: `import asyncio
+import aiohttp
+import logging
+import time
+from typing import Dict, List, Any
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
+class AsyncTelemetryPoller:
+    """Asynchronous telemetry daemon for multi-vendor network devices."""
+    
+    def __init__(self, targets: List[Dict[str, Any]], max_concurrency: int = 50):
+        self.targets = targets
+        self.semaphore = asyncio.Semaphore(max_concurrency)
+        self.session = None
+
+    async def poll_device(self, target: Dict[str, Any]) -> Dict[str, Any]:
+        """Polls single network device RESTCONF interface with async semaphore rate-limiting."""
+        async with self.semaphore:
+            url = f"https://{target['ip']}/restconf/data/ietf-interfaces:interfaces-state"
+            headers = {"Accept": "application/yang-data+json"}
+            
+            start_time = time.time()
+            try:
+                async with self.session.get(url, headers=headers, timeout=5, ssl=False) as resp:
+                    latency = (time.time() - start_time) * 1000
+                    if resp.status == 200:
+                        data = await resp.json()
+                        return {
+                            "host": target["hostname"],
+                            "status": "SUCCESS",
+                            "latency_ms": round(latency, 2),
+                            "payload": data
+                        }
+                    return {"host": target["hostname"], "status": f"HTTP_{resp.status}"}
+            except Exception as err:
+                return {"host": target["hostname"], "status": "ERROR", "error": str(err)}
+
+    async def run(self):
+        """Spawns asyncio task gathering loop."""
+        async with aiohttp.ClientSession() as session:
+            self.session = session
+            tasks = [self.poll_device(t) for t in self.targets]
+            results = await asyncio.gather(*tasks)
+            logging.info(f"Successfully polled {len(results)} target devices.")
+            return results
+
+if __name__ == "__main__":
+    inventory = [{"hostname": f"router-0{i}", "ip": f"10.0.0.{i}"} for i in range(1, 101)]
+    poller = AsyncTelemetryPoller(inventory, max_concurrency=20)
+    asyncio.run(poller.run())`
+                },
+                sql: {
+                    path: 'database/schema_migration.sql',
+                    lang: 'POSTGRESQL 15+',
+                    code: `-- PostgreSQL Telemetry Time-Series Hypertable Schema
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS timescaledb;
+
+-- Core Devices Table
+CREATE TABLE IF NOT EXISTS network_devices (
+    device_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    hostname VARCHAR(128) NOT NULL UNIQUE,
+    vendor VARCHAR(64) NOT NULL,
+    ip_address INET NOT NULL,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Time-Series Telemetry Table
+CREATE TABLE IF NOT EXISTS device_telemetry (
+    time TIMESTAMPTZ NOT NULL,
+    device_id UUID NOT NULL REFERENCES network_devices(device_id),
+    cpu_utilization REAL,
+    memory_used_mb REAL,
+    interfaces_status JSONB,
+    latency_ms REAL
+);
+
+-- Convert to TimescaleDB Hypertable
+SELECT create_hypertable('device_telemetry', 'time', if_not_exists => TRUE);
+
+-- Indexes for Fast Query Retrieval
+CREATE INDEX ON device_telemetry (device_id, time DESC);
+CREATE INDEX ON device_telemetry USING BRIN (time);
+
+-- Continuous Aggregate for Hourly Averages
+CREATE MATERIALIZED VIEW telemetry_hourly_avg
+WITH (timescaledb.continuous) AS
+SELECT
+    time_bucket('1 hour', time) AS bucket,
+    device_id,
+    AVG(cpu_utilization) AS avg_cpu,
+    MAX(cpu_utilization) AS max_cpu
+FROM device_telemetry
+GROUP BY bucket, device_id;`
+                },
+                cicd: {
+                    path: '.github/workflows/telemetry_ci.yml',
+                    lang: 'YAML / GITHUB ACTIONS',
+                    code: `name: Async Telemetry Poller CI Pipeline
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_DB: telemetry_db
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: secretpassword
+        ports:
+          - 5432:5432
+          
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest pytest-asyncio aiohttp psycopg2-binary
+
+      - name: Lint Code with Ruff
+        run: ruff check .
+
+      - name: Run Async Unit & Integration Tests
+        env:
+          DATABASE_URL: postgresql://admin:secretpassword@localhost:5432/telemetry_db
+        run: |
+          pytest tests/ --asyncio-mode=auto -v`
+                }
+            };
+
+            const codeDisplay = document.getElementById('codeDisplay');
+            const snippetPath = document.getElementById('snippetPath');
+            const snippetLang = document.getElementById('snippetLang');
+            const snippetTabs = document.querySelectorAll('.snippet-tab');
+            const copySnippetBtn = document.getElementById('copySnippetBtn');
+
+            let activeTabKey = 'poller';
+
+            function renderSnippet(key) {
+                activeTabKey = key;
+                const item = snippetsData[key];
+                if (!item) return;
+
+                snippetPath.textContent = item.path;
+                snippetLang.textContent = item.lang;
+                
+                // Escape HTML for clean rendering
+                const escaped = item.code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                codeDisplay.innerHTML = escaped;
+            }
+
+            renderSnippet('poller');
+
+            snippetTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    snippetTabs.forEach(t => {
+                        t.className = 'snippet-tab px-4 py-2 text-xs font-mono rounded-t-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-2';
+                    });
+                    tab.className = 'snippet-tab px-4 py-2 text-xs font-mono rounded-t-lg bg-slate-900 text-brand-400 border-t-2 border-brand-500 font-bold transition flex items-center gap-2';
+                    renderSnippet(tab.dataset.tab);
+                });
+            });
+
+            copySnippetBtn.addEventListener('click', () => {
+                const item = snippetsData[activeTabKey];
+                if (!item) return;
+
+                const area = document.createElement('textarea');
+                area.value = item.code;
+                document.body.appendChild(area);
+                area.select();
+                document.execCommand('copy');
+                document.body.removeChild(area);
+
+                const origHtml = copySnippetBtn.innerHTML;
+                copySnippetBtn.innerHTML = `<i class="fa-solid fa-check text-emerald-400"></i><span class="text-emerald-400">Copied!</span>`;
+                setTimeout(() => {
+                    copySnippetBtn.innerHTML = origHtml;
+                }, 2000);
+            });
+
+            const exportModalBtn = document.getElementById('exportModalBtn');
+            const exportModal = document.getElementById('exportModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const closeModalFooterBtn = document.getElementById('closeModalFooterBtn');
+            const copyFullSourceBtn = document.getElementById('copyFullSourceBtn');
+
+            function toggleModal(show) {
+                if (show) {
+                    exportModal.classList.remove('hidden');
+                } else {
+                    exportModal.classList.add('hidden');
+                }
+            }
+
+            exportModalBtn.addEventListener('click', () => toggleModal(true));
+            closeModalBtn.addEventListener('click', () => toggleModal(false));
+            closeModalFooterBtn.addEventListener('click', () => toggleModal(false));
+
+            exportModal.addEventListener('click', (e) => {
+                if (e.target === exportModal) toggleModal(false);
+            });
+
+            copyFullSourceBtn.addEventListener('click', () => {
+                const fullHtml = document.documentElement.outerHTML;
+                const area = document.createElement('textarea');
+                area.value = fullHtml;
+                document.body.appendChild(area);
+                area.select();
+                document.execCommand('copy');
+                document.body.removeChild(area);
+
+                const origText = copyFullSourceBtn.innerHTML;
+                copyFullSourceBtn.innerHTML = `<i class="fa-solid fa-check"></i><span>Source Copied!</span>`;
+                setTimeout(() => {
+                    copyFullSourceBtn.innerHTML = origText;
+                }, 2000);
+            });
+
+        });
+    </script>
+
+</body></html>
