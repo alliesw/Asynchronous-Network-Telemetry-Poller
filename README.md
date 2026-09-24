@@ -1,5 +1,17 @@
 Asynchronous Network Telemetry Poller
 
+Network Automation & Monitoring Platform
+A comprehensive multi-year software initiative focused on building scalable telemetry collection, automated network diagnostics, PostgreSQL data pipelines, and real-time Splunk alert integrations.
+
+20+ Mos.
+Continuous Delivery
+100%
+Custom Built Stack
+15k+
+Telemetry Events/Sec
+4 Peers
+Core Engineering Team
+
 An interactive engineering showcase and project artifact documenting 8+ months of continuous, collaborative network automation development. This self-contained web application serves as both a live demonstrator and a technical archive for asynchronous network telemetry ingestion, storage, monitoring, and visualization.
 
 📌 Overview
