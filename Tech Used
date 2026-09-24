@@ -1,0 +1,32 @@
+Core Tech Stack & Proficiency
+Tools and methodologies utilized throughout the 8-month project lifecycle.
+
+Py
+Python Development
+Core
+Built asynchronous data collectors, daemon scripts, and custom log parsing routines using `asyncio` and standard library tooling.
+
+PG
+PostgreSQL Schemas
+Data
+Designed normalized relational schemas, index strategies for time-series data, and written optimized SQL query workflows.
+
+Sp
+Splunk Telemetry
+Monitoring
+Engineered HTTP Event Collector (HEC) JSON streams, constructed dashboard visualizations, and defined trigger thresholds.
+
+Git
+Git & CI/CD Pipelines
+DevOps
+Managed parallel version control across a 4-person team using branch protection rules, GitHub Actions, and PR code reviews.
+
+API
+RESTful Services
+Backend
+Structured FastAPI JSON endpoints providing secure access to live router metrics, database records, and health checks.
+
+Net
+Network Automation
+Domain
+Multi-vendor equipment configuration, interface state verification, telemetry aggregation, and automated error logging.
