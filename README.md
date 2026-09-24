@@ -19,3 +19,5 @@ Interactive Code Snippet Viewer: Tabbed syntax-highlighted snippets for Python p
 Built-in Source Exporter: An export modal and clipboard utility that copies the clean code template.
 
 Dark/Light Mode: Full dark mode support using Tailwind CSS with automatic system fallback.
+
+
