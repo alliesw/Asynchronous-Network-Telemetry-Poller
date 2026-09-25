@@ -1,0 +1,13 @@
+### 🚀 Phase 1: Project Architecture & Initial Database Design
+
+> **Team:** 2-Person Engineering Group | **Core Focus:** Schema Modeling & Ingestion Architecture
+
+Formed the technical core by modeling custom PostgreSQL relational schemas for high-frequency telemetry ingestion and drafting comprehensive system specifications.
+
+#### 📦 Key Deliverables
+* **SNMP Parsing:** Established multi-vendor SNMP parsing rules for streaming network metrics.
+* **DevOps Standards:** Implemented Git workflow conventions, branch structures, and environment management.
+* **Async Poller:** Created initial Python asynchronous polling daemons using `asyncio`.
+
+#### 🛠️ Tech Stack
+`Python 3.11` • `PostgreSQL` • `Git` • `Virtualenvs`
