@@ -1,0 +1,6 @@
+Automated CI/CD Pipelines & Splunk Data Stream Integrations
+-------------------------------------------------------------
+Integrated GitHub Actions automated testing suites to validate code quality across pull requests. 
+Configured HTTP Event Collector (HEC) endpoints to push structured metrics into Splunk dashboards.
+
+Using: Splunk, CI/CD, Docker
