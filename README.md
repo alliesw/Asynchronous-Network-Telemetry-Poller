@@ -77,7 +77,7 @@ Finalizing project showcase artifacts, query optimization, and packaging documen
 📦 Getting Started
 To view or deploy the project showcase locally:
 Bash# Clone the repo
-git clone https://github.com/your-username/Asynchronous-Network-Telemetry-Poller.git
+git clone https://github.com/alliesw/Asynchronous-Network-Telemetry-Poller.git
 
 # Navigate into the project folder
 cd Asynchronous-Network-Telemetry-Poller
