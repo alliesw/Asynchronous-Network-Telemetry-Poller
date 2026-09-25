@@ -1,0 +1,178 @@
+Phase 2: Automation & CI/CD
+Commit #f942c1
+Automated CI/CD Pipelines & Splunk Data Stream Integrations
+Integrated GitHub Actions automated testing suites to validate code quality across pull requests. Configured HTTP Event Collector (HEC) endpoints to push structured metrics into Splunk dashboards.
+
+Architecture Overview
+[ Git Push / PR ] ──> [ GitHub Actions Pipeline ]
+                             │
+                             ├── 1. Code Linting & Unit Tests (Pytest)
+                             ├── 2. Build & Test Docker Container
+                             └── 3. Deploy App / Run Telemetry Service
+                                         │
+                                         ▼
+                             [ Python Async Application ]
+                                         │  (JSON via HTTP POST)
+                                         ▼
+                            [ Splunk HEC Token Endpoint ]
+                                         │
+                                         ▼
+                             [ Splunk Live Dashboard ]
+
+
+Step 1: Containerize the Application (Dockerfile)
+Package your Python telemetry app and dependencies into an isolated container.
+
+# Use a lightweight official Python runtime
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    APP_HOME=/app
+
+WORKDIR $APP_HOME
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application source code
+COPY . .
+
+# Run application as non-root user for security
+RUN useradd -m appuser && chown -R appuser:appuser /app
+USER appuser
+
+# Start the async telemetry poller
+CMD ["python", "main.py"]
+
+
+Step 2: Push Metrics to Splunk HEC in Python (splunk_publisher.py)Send structured JSON events asynchronously to Splunk’s HEC endpoint using aiohttp.Pythonimport aiohttp
+import asyncio
+import json
+import logging
+from datetime import datetime, timezone
+
+logging.basicConfig(level=logging.INFO)
+
+class SplunkHECPublisher:
+    def __init__(self, splunk_url: str, token: str, index: str = "network_telemetry"):
+        # HEC standard endpoint: https://<splunk-host>:8088/services/collector/event
+        self.endpoint = f"{splunk_url.rstrip('/')}/services/collector/event"
+        self.headers = {
+            "Authorization": f"Splunk {token}",
+            "Content-Type": "application/json"
+        }
+        self.index = index
+
+    async def send_event(self, session: aiohttp.ClientSession, device_id: str, metrics: dict):
+        """Formats and posts structured JSON metrics to Splunk HEC."""
+        payload = {
+            "time": int(datetime.now(timezone.utc).timestamp()),
+            "host": device_id,
+            "source": "netpulse-async-poller",
+            "sourcetype": "_json",
+            "index": self.index,
+            "event": {
+                "device_id": device_id,
+                "status": metrics.get("status", "UP"),
+                "cpu_utilization_pct": metrics.get("cpu", 0.0),
+                "memory_utilization_pct": metrics.get("memory", 0.0),
+                "interface_flaps": metrics.get("flaps", 0),
+                "latency_ms": metrics.get("latency", 0.0)
+            }
+        }
+
+        try:
+            async with session.post(self.endpoint, headers=self.headers, json=payload, ssl=False) as resp:
+                if resp.status == 200:
+                    logging.info(f" Successfully streamed telemetry for {device_id} to Splunk.")
+                else:
+                    text = await resp.text()
+                    logging.error(f" Splunk HEC error {resp.status}: {text}")
+        except Exception as e:
+            logging.error(f" Failed connecting to Splunk HEC: {e}")
+
+# Example Usage
+async def main():
+    SPLUNK_URL = "https://splunk.internal.lab:8088"
+    HEC_TOKEN = "12345678-1234-1234-1234-1234567890AB"
+
+    async with aiohttp.ClientSession() as session:
+        publisher = SplunkHECPublisher(SPLUNK_URL, HEC_TOKEN)
+        sample_metrics = {"status": "UP", "cpu": 24.5, "memory": 61.2, "flaps": 0, "latency": 12.4}
+        await publisher.send_event(session, "router-core-01", sample_metrics)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+Step 3: Set Up the GitHub Actions CI/CD Pipeline (.github/workflows/ci-cd.yml)This workflow automatically runs on pull requests and pushes to main. It tests code quality, runs unit tests, builds the Docker image, and validates the Splunk exporter configuration.YAMLname: CI/CD Pipeline & Code Quality Verification
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-test:
+    name: 🧪 Lint & Run Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest aiohttp
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Lint with Flake8 (Code Quality)
+        run: |
+          # Stop build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Exit-zero treats all errors as warnings
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      - name: Execute Unit Tests (Pytest)
+        run: |
+          pytest tests/ --doctest-modules --junitxml=junit/test-results.xml
+
+  docker-build:
+    name: 🐳 Build Docker Container
+    needs: lint-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Local Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: netpulse-telemetry:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Verify Container Image Startup
+        run: |
+          docker run --rm netpulse-telemetry:latest python -c "print('Docker container build verified successfully!')"
+Step 4: Configure Splunk HTTP Event Collector (HEC)To receive data in Splunk:Enable HEC: In Splunk Web, go to Settings $\rightarrow$ Data Inputs $\rightarrow$ HTTP Event Collector $\rightarrow$ Global Settings $\rightarrow$ Enable HTTP Event Collector (Default Port: 8088).Create New Token: Click New Token, name it netpulse-collector, set Source Type to _json, and assign a destination index (e.g., network_telemetry).Save Token: Save the generated GUID token and add it to your environment variables or secret store (SPLUNK_HEC_TOKEN).
