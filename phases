@@ -1,0 +1,44 @@
+Phase 2: Database Normalization & Telemetry Pipeline Integration
+1. GitHub README Milestone Block (Markdown)
+Markdown
+### ⚙️ Phase 2: Database Normalization & Telemetry Pipeline Integration
+
+> **Team:** 4-Person Engineering Group | **Core Focus:** Ingestion & Telemetry Processing
+
+Expanded team collaboration to normalize time-series database schemas in PostgreSQL, build automated CI/CD workflows, and integrate Splunk HTTP Event Collector (HEC) JSON streaming for real-time telemetry pipelines.
+
+#### 📦 Key Deliverables
+* **Time-Series Schemas:** Engineered normalized PostgreSQL tables with specialized indexing strategies for high-volume logs.
+* **Splunk Integration:** Configured Splunk HEC integration for streaming JSON alerts and operational telemetry metrics.
+* **CI/CD Automation:** Established GitHub Actions workflows with automated testing and pull request validation for a 4-person team.
+
+#### 🛠️ Tech Stack
+`PostgreSQL` • `Splunk HEC` • `GitHub Actions` • `Python`
+
+3. HTML / Tailwind CSS Web Card (For index.html)
+<div class="p-6 bg-slate-900 border border-slate-800 rounded-xl shadow-lg space-y-4">
+  <div class="flex items-center justify-between">
+    <h3 class="text-xl font-bold text-white">REST API Services & Dashboard Infrastructure</h3>
+    <span class="px-3 py-1 text-xs font-semibold text-sky-400 bg-sky-950/80 border border-sky-800 rounded-full">Phase 3</span>
+  </div>
+  
+  <p class="text-slate-300 text-sm leading-relaxed">
+    Architected RESTful API microservices using FastAPI to expose live device metrics, query PostgreSQL database records, and feed real-time monitoring dashboards.
+  </p>
+
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Key Deliverables</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Built high-performance FastAPI endpoints for router metric inspection</li>
+      <li>Designed custom Splunk dashboards and automated alert thresholds</li>
+      <li>Implemented secure API authentication and response serialization</li>
+    </ul>
+  </div>
+
+  <div class="pt-2 flex flex-wrap gap-2">
+    <span class="px-2.5 py-1 text-xs font-medium text-slate-300 bg-slate-800 rounded-md">FastAPI</span>
+    <span class="px-2.5 py-1 text-xs font-medium text-slate-300 bg-slate-800 rounded-md">REST APIs</span>
+    <span class="px-2.5 py-1 text-xs font-medium text-slate-300 bg-slate-800 rounded-md">Splunk Dashboards</span>
+    <span class="px-2.5 py-1 text-xs font-medium text-slate-300 bg-slate-800 rounded-md">JSON</span>
+  </div>
+</div>
